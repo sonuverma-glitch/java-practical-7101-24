@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonu Verma | Java Practical Record</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand-group">
+        <div class="brand-logo">☕</div>
+        <div class="brand-details">
+          <h1 class="brand-title">Java Lab Record</h1>
+          <p class="brand-subtitle">BCA 5th Semester • Panjab University Syllabus</p>
+        </div>
+      </div>
+
+      <div class="student-pill">
+        <div class="avatar">SV</div>
+        <div class="student-info">
+          <span class="student-name">Sonu Verma</span>
+          <span class="student-meta">Roll: 24050304 | Class: 7101/24</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Profile Section -->
+  <section class="hero-section">
+    <div class="hero-card">
+      <div class="hero-left">
+        <span class="badge">Practical Examination Ready</span>
+        <h2>Practical File & Source Code Hub</h2>
+        <p>Complete repository containing verified Java programs with questions, clean source code, and executed console outputs across all 12 syllabus sections.</p>
+        
+        <div class="quick-stats">
+          <div class="stat-item">
+            <span class="stat-num" id="totalProgramsCount">228</span>
+            <span class="stat-label">Programs Solved</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">12</span>
+            <span class="stat-label">Syllabus Sections</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Output Verified</span>
+          </div>
+        </div>
+      </div>
+
+       <div class="hero-actions">
+         <button class="btn btn-primary" id="btnDownloadAll">
+           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download All Code (.zip) 
+        </button>
+         <button class="btn btn-secondary" onclick="window.print()"> 
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print Lab Record
+        </button>  
+      </div> 
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="main-layout">
+    
+    <!-- Left Sticky Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h3>Syllabus Index</h3>
+        <span class="section-badge" id="sectionCount">12 Units</span>
+      </div>
+
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchInput" placeholder="Search question or code...">
+      </div>
+
+      <nav class="nav-links" id="sidebarLinks">
+        <!-- Rendered dynamically via JS -->
+      </nav>
+    </aside>
+
+    <!-- Center Programs Area -->
+    <section class="content-area">
+      <div class="search-summary" id="searchSummary" style="display: none;">
+        <span>Showing search results for "<strong id="searchQueryText"></strong>"</span>
+        <button class="clear-btn" id="clearSearch">Clear Search</button>
+      </div>
+
+      <div id="programsContainer">
+        <!-- Program cards rendered dynamically -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>© 2026 <strong>Sonu Verma</strong> (Roll No: 24050304, Class: 7101/24) • BCA Department 5th Semester</p>
+      <p class="credit">Built with Clean Semantic HTML5, Modular CSS3 & Vanilla JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="js/programs_data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
